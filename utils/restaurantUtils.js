@@ -45,38 +45,6 @@ function generateMenu() {
 /**
  * Additional utility functions can be defined here if needed.
  */
-function generateDishoftheDay(name) {
-  let dailyspeciallist = [];
-  Dishes.italian.forEach(dish => {
-    if (dish.dailySpecial === name) {
-      dailyspeciallist.push(dish);
-    }
-  });
-  Dishes.indian.forEach(dish => {
-    if (dish.dailySpecial === name) {
-      dailyspeciallist.push(dish);
-    }
-  });
-  Dishes.chinese.forEach(dish => {
-    if (dish.dailySpecial === name) {
-      console.log(dish.restaurantid);
-      dailyspeciallist.push(dish);
-    }
-  });
-  Dishes.vegan.forEach(dish => {
-    if (dish.dailySpecial === name) {
-      dailyspeciallist.push(dish);
-    }
-  });
-  Dishes.mexican.forEach(dish => {
-    if (dish.dailySpecial === name) {
-      dailyspeciallist.push(dish);
-    }
-  });
-  console.log(dailyspeciallist);
-  return dailyspeciallist;
-}
-
 function findDishesbyResturantId(id){
   let disheslist = [];
   // console.log(Dishes.italian[0].restaurantid);
@@ -111,6 +79,38 @@ function findDishesbyResturantId(id){
   });
   // console.log(disheslist);
   return disheslist;
+}
+
+function generateDishoftheDay(name) {
+  let dailyspeciallist = [];
+  Dishes.italian.forEach(dish => {
+    if (dish.dailySpecial === name) {
+      dailyspeciallist.push(dish);
+    }
+  });
+  Dishes.indian.forEach(dish => {
+    if (dish.dailySpecial === name) {
+      dailyspeciallist.push(dish);
+    }
+  });
+  Dishes.chinese.forEach(dish => {
+    if (dish.dailySpecial === name) {
+      console.log(dish.restaurantid);
+      dailyspeciallist.push(dish);
+    }
+  });
+  Dishes.vegan.forEach(dish => {
+    if (dish.dailySpecial === name) {
+      dailyspeciallist.push(dish);
+    }
+  });
+  Dishes.mexican.forEach(dish => {
+    if (dish.dailySpecial === name) {
+      dailyspeciallist.push(dish);
+    }
+  });
+  console.log(dailyspeciallist);
+  return dailyspeciallist;
 }
 
 module.exports = { generateRandomMenuItem, selectRandomCuisine, generateMenu, generateDishoftheDay, findDishesbyResturantId };
