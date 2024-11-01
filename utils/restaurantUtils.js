@@ -6,7 +6,7 @@ generateRandomMenuItem(Dishes.italian);
 selectRandomCuisine(Cuisines);
 generateMenu(Dishes);
 findDishesbyResturantId('the-gourmet-bistro');
-generateDishoftheDay('Daily special');
+// generateDishoftheDay('Daily special');
 
 /**
  *
@@ -77,7 +77,7 @@ function findDishesbyResturantId(id){
       disheslist.push(dish);
     }
   });
-  // console.log(disheslist);
+  console.log(disheslist);
   return disheslist;
 }
 
@@ -109,7 +109,7 @@ function generateDishoftheDay(name) {
       dailyspeciallist.push(dish);
     }
   });
-  console.log(dailyspeciallist);
+  // console.log(dailyspeciallist);
   return dailyspeciallist;
 }
 
