@@ -7,7 +7,9 @@
     <body>
         <main class="main-content">
             <h1>Menu</h1>
-            <p>Name: <%= menuitems[0]%></p>
+            <% menuitems.forEach((menu) => { %>
+                <p><%= menu.name %> : <%= menu.price %></p>
+            <% }) %>
         </main>
     </body>
 </html>
