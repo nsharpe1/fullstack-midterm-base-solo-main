@@ -3,14 +3,16 @@ const { generateRandomMenuItem, generateMenu, selectRandomCuisine } = require(".
 
 describe('Restaurant Functions', () => {
     describe('generateRandomMenuItem', () => {
-      // Test implementations go here
+      let randomitem = generateRandomMenuItem(Dishes.italian);
+      console.log(randomitem);
+      expect(Dishes.italian).toContain(randomitem);
     });
 
-    describe('generateMenu', () => {
+    //describe('generateMenu', () => {
       // Test implementations go here
-    });
+    //});
 
-    describe('selectRandomCuisine', () => {
+    //describe('selectRandomCuisine', () => {
       // Test implementations go here
-    });
+    //});
 });
