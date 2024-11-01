@@ -17,12 +17,18 @@
                 </select>
                 <button type="submit">Get the menu!</button>
             </form>
+
+
+            <% let formattedrestaurantname = menuitem.restaurantid.replace(/-/g, " ") 
+            let namearray = formattedrestaurantname.split(" ")
+            let formattedarray = namearray.map((word) => {return word.charAt(0).toUpperCase()+word.slice(1)})
+            let formattedfullname = formattedarray.join(" ")%>
             
             <h3><%= menuitem.name%></h3>
             <h3><%= menuitem.description%></h3>
             <h3><%= menuitem.price%></h3>
             <h3><%= menuitem.dailySpecial%></h3>
-            <h3><%= menuitem.restaurantid%></h3>
+            <h3><%= formattedfullname %></h3>
             
             <a href="/menualerts">Go to menu alerts page</a>
         </main>
