@@ -12,6 +12,9 @@
             <h3><%= dailyspecial.name%></h3>
             <h3><%= dailyspecial.description%></h3>
             <h3><%= dailyspecial.price%></h3>
+            <% dailyspecial.forEach((dish) => { %>
+                <p><%= dish.restaurantid %>: <%= dish.name %></p>
+            <% }) %>
         </main>
     </body>
 </html>
