@@ -7,13 +7,8 @@
     <body>
         <main class="main-content">
             <h1>Menu Alerts</h1>
-            <h3><%= dailyspecial.restaurantid%></h3>
-            <h3><%= dailyspecial.dailySpecial%></h3>
-            <h3><%= dailyspecial.name%></h3>
-            <h3><%= dailyspecial.description%></h3>
-            <h3><%= dailyspecial.price%></h3>
             <% dailyspecial.forEach((dish) => { %>
-                <p><%= dish.restaurantid %>: <%= dish.name %></p>
+                <p><%= dish.restaurantid %>: <%= dish.name %> <%= dish.dailySpecial%></p>
             <% }) %>
         </main>
     </body>
