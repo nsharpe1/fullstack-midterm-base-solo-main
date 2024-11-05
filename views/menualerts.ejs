@@ -8,8 +8,16 @@
         <main class="main-content">
             <h1>Menu Alerts</h1>
             <% dailyspecial.forEach((dish) => { %>
-                <p><%= dish.restaurantid %>: <%= dish.name %> <%= dish.dailySpecial%></p>
-            <% }) %>
+                <% 
+                        let formattedrestaurantname = dish.restaurantid.replace(/-/g, " ");
+                        let namearray = formattedrestaurantname.split(" ");
+                        let formattedarray = namearray.map((word) => {
+                            return word.charAt(0).toUpperCase() + word.slice(1);
+                        });
+                        let formattedfullname = formattedarray.join(" ");
+                    %>
+                <p><%= formattedfullname %>: <%= dish.name %> <%= dish.dailySpecial %></p>
+                <% }) %>
         </main>
     </body>
 </html>
